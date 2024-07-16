@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Module to provide nginx logs stored in mongodb"""
 from pymongo import MongoClient
 
 
@@ -15,7 +16,6 @@ def log_stats():
     # Number of logs with method GET and path /status
     status_check = collection.count_documents({"method": "GET",
                                                "path": "/status"})
-    # Display the results
     print(f"{total} logs")
     print("Methods:")
     for method in methods:
