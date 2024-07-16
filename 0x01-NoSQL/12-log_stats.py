@@ -9,7 +9,7 @@ if __name__ == "__main__":
     print("{} logs".format(logs.count_documents({})))
     print('Methods')
     for x in method:
-        print(" method {}: {}".format(x, logs.count_documents({'method': x})))
+        print("\tmethod {}: {}".format(x, logs.count_documents({'method': x})))
     print("{} status check".format(logs.count_documents({'method': 'GET',
                                                         'path': '/status'}
                                                         )))
