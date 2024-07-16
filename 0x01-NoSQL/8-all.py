@@ -6,4 +6,4 @@ def list_all(mongo_collection):
     """
     Function to list all document from a Pymongo object
     """
-    return list(mongo_collection) if mongo_collection else []
+    return list(mongo_collection.find())
