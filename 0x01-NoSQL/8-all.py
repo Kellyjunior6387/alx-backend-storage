@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 """A script to list all documents"""
+
+
 def list_all(mongo_collection):
     """
     Function to list all document from a Pymongo object
