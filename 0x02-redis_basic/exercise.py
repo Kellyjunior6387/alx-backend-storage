@@ -12,6 +12,7 @@ class Cache:
         """Initilaise redis instance
         """
         self.__redis = redis.Redis()
+        self.__redis.flushdb()
 
     def store(self, data: Union[str, int, bytes, float]) -> str:
         """Store the data input in a redis instance
